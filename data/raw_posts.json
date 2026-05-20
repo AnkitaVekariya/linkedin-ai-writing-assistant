@@ -1,0 +1,54 @@
+[
+  {
+    "text": "What is the worst way of getting rejected for a job?\n\nOver the past few months, I was on an intense job search journey, targeting some of the best in the industry.\n\nI put my best foot forward with:\n\nAMAZON: 3 interview emails, ultimately failing in the second technical round.\n\nGOOGLE: Completed initial assessment. Still waiting on feedback, but moving on.\n\nMakeMyTrip (MMT): This one was a rollercoaster. I aced the assessment and received an email saying I was among the top shortlisted candidates, only to get rejected in the next paragraph.\n\nA humbling reminder of how razor-thin the margins are at this level.\n\nIBM, Flipkart and others: Assessed/interviewed, didn’t hear back.\n\nHas anyone else experienced the whiplash of a compliment followed by a rejection in the same email?",
+    "engagement": 46
+  },
+  {
+    "text": "Wrapped up my internship perfectly!\n\nMy experience at Petpooja as an intern was a roller-coaster ride full of ups and downs.\n\nInitially, I was overwhelmed with full-time work, timings, traffic and everything else.\n\nEventually, I adapted and improved myself.\n\nI became a better communicator, improved my SQL and problem-solving skills, worked on projects and learned teamwork.\n\nThanks to all my colleagues and mentors for contributing to my growth journey.",
+    "engagement": 98
+  },
+  {
+    "text": "Okay, so the second piece of the missing puzzle is 'The reason behind building LSTMs.'\n\nI searched for the original LSTM research paper and realized what they were actually built for.\n\nThe paper 'LSTM can Solve Hard Long Time Lag Problems' answered many questions for me.\n\nThis experience taught me something important:\n\nNever blindly trust tutorials.\nAlways ask questions and do your own digging.\n\nReading research papers provides a depth of understanding that short-form explanations often miss.",
+    "engagement": 26
+  },
+  {
+    "text": "HOW BRUSHING MY TEETH UNLOCKED LSTMs\n\nWhen I started exploring machine learning and NLP, I struggled to understand why LSTMs actually worked.\n\nMost tutorials explained the architecture but never the thought process behind it.\n\nThen one day while brushing my teeth, I realized the missing piece:\n\nVECTORS.\n\nOnce I started thinking in terms of vector algebra instead of raw numbers, things finally clicked.\n\nSometimes understanding comes from the weirdest moments.",
+    "engagement": 28
+  },
+  {
+    "text": "FOUR YEARS OF PYTHON AND I JUST LEARNED THIS!!\n\nRecently, I discovered something interesting while solving a Python problem.\n\nModifying a global list inside a function behaves differently from modifying a global variable.\n\nExample:\n\nflag = False\nglaf = [False]\n\ndef func():\n    flag = True\n    glaf[0] = True\n\nOutput:\nFalse True\n\nPython still surprises me even after years of coding.",
+    "engagement": 32
+  },
+  {
+    "text": "Seeking a Data Science/Machine Learning Internship or Full-Time Role!\n\nI'm a final-year student with a strong foundation in statistics, algebra, machine learning and deep learning.\n\nOpen to opportunities in:\n- Data Science\n- Machine Learning\n- Generative AI\n- Data Analysis\n- Model Development\n\nAny opportunities or leads would be appreciated.",
+    "engagement": 18
+  },
+  {
+    "text": "Just wrapped up a super quick but awesome 15-day internship at IBM and CSRBOX!\n\nLearned a lot about IBM Cloud and integrating machine learning and AI models into cloud systems.\n\nBuilt a chatbot using IBM Watsonx Assistant for computer part selection.\n\nShort internship.\nMassive learning.",
+    "engagement": 43
+  },
+  {
+    "text": "Despite training limitations, my DCGAN is generating promising results!\n\nThe model trained for just 50 epochs on Google Colab and 10 epochs without a graphics card.\n\nStill, the generated handwritten digits look surprisingly good.\n\nDeep learning never stops amazing me.",
+    "engagement": 33
+  },
+  {
+    "text": "Just implemented a DCGAN on the MNIST dataset.\n\nGenerating handwritten digits with deep learning is honestly very cool.\n\nThe model is still in the training phase.\nWill soon share generated images and GIFs.\n\n#deeplearning #machinelearning",
+    "engagement": 29
+  },
+  {
+    "text": "Best Photo Identifier:\nA project built by me and my team in just 36 hours during a hackathon.\n\nThe system identifies the best photos based on:\n- pose\n- blur\n- facial expression\n- contrast\n- eye detection\n\nHackathons truly push creativity to another level.",
+    "engagement": 36
+  },
+  {
+    "text": "Here’s a custom Face Detection and Localization project I recently created from scratch.\n\nTechnologies used:\n- OpenCV\n- labelme\n- Albumentations\n- TensorFlow\n- Keras\n- VGG16\n\nImplemented a custom TensorFlow subclass model capable of producing two outputs simultaneously using two separate loss functions.",
+    "engagement": 43
+  },
+  {
+    "text": "Here is a simple implementation of an ANN (Artificial Neural Network) using a Customer Churn dataset.\n\nThe ANN contains:\n- one input layer\n- two hidden layers\n- one output layer\n\nUsed ReLU activation for hidden layers and sigmoid for the output layer.\n\nTried both SGD and Adam optimizers, and Adam performed better.",
+    "engagement": 24
+  },
+  {
+    "text": "My first Machine Learning project: Ahmedabad House Rent Price Prediction.\n\nThis project predicts house rent prices based on locality, BHK count, layout type and furnishing.\n\nLibraries used:\n- Pandas\n- Matplotlib\n- Seaborn\n- Scikit-learn\n\nUsed K-Fold Cross Validation and GridSearchCV for model evaluation and selection.\n\nDecisionTreeRegressor produced the best results.",
+    "engagement": 34
+  }
+]
