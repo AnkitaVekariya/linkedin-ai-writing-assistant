@@ -1,6 +1,6 @@
 import streamlit as st
 from few_shot import FewShotPosts
-from post_generator import generate_post
+from post_generator import generate_post, refine_post
 
 
 st.set_page_config(
@@ -12,7 +12,13 @@ Length_opt = ["Short", "Medium", "Long"]
 
 Language_opt = ["English", "Hinglish"]
 
-Tone_opt = ["Professional", "Casual", "Motivational", "Storytelling","Technical"]
+Tone_opt = [
+    "Professional",
+    "Casual",
+    "Motivational",
+    "Storytelling",
+    "Technical"
+]
 
 
 # CLEAN CSS
@@ -101,7 +107,15 @@ def main():
             Tone_opt
         )
 
-    # BUTTON
+    # ADDITIONAL CONTEXT
+    additional_context = st.text_area(
+        "Additional Instructions",
+        placeholder="Example: Mention internship experience or make it emotional..."
+    )
+
+    use_emojis = st.toggle("Use Emojis")
+    
+    # GENERATE BUTTON
     if st.button("Generate Post"):
 
         with st.spinner("Generating post..."):
@@ -117,18 +131,44 @@ def main():
                 selected_language,
                 selected_tag,
                 selected_tone,
+                additional_context,
+                use_emojis,
                 examples
             )
 
-        # OUTPUT
+            st.session_state["generated_post"] = post
+
+    # DISPLAY GENERATED POST
+    if "generated_post" in st.session_state:
+
         st.markdown(
             f"""
             <div class="post-box">
-            {post}
+            {st.session_state["generated_post"]}
             </div>
             """,
             unsafe_allow_html=True
         )
+
+        st.markdown("### Refine Post")
+
+        refine_instruction = st.text_input(
+            "Modify generated post",
+            placeholder="Example: make it shorter or more professional"
+        )
+
+        if st.button("Refine Post"):
+
+            with st.spinner("Refining post..."):
+
+                refined_post = refine_post(
+                    st.session_state["generated_post"],
+                    refine_instruction
+                )
+
+                st.session_state["generated_post"] = refined_post
+
+            st.rerun()
 
 
 if __name__ == "__main__":

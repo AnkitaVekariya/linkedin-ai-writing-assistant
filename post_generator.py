@@ -13,7 +13,15 @@ def get_length_str(length):
         return "11 to 15 lines"
 
 
-def generate_post(length, language, topic, tone, few_shot_examples):
+def generate_post(
+    length,
+    language,
+    topic,
+    tone,
+    additional_context,
+    use_emojis,
+    few_shot_examples
+):
 
     length_str = get_length_str(length)
 
@@ -37,6 +45,9 @@ Example {i+1}:
     Language: {language}
     Tone: {tone}
 
+    Additional Context:
+    {additional_context}
+
     Rules:
     - No preamble
     - Human-like tone
@@ -45,6 +56,8 @@ Example {i+1}:
     - Hook the reader in the first line
     - Use English script only
     - Follow the selected tone consistently
+    - If additional context is provided,
+      naturally incorporate it into the post
 
     Tone Guidelines:
 
@@ -63,11 +76,41 @@ Example {i+1}:
     - Technical:
     educational and knowledge-focused
 
+    Emoji Usage:
+    {"Use relevant emojis naturally" if use_emojis else "Do not use emojis"}
+
     Here are some example posts to mimic writing style:
 
     {examples_text}
 
     Now generate a new post.
+    '''
+
+    response = llm.invoke(prompt)
+
+    return response.content
+
+
+def refine_post(post, instruction):
+
+    prompt = f'''
+    You are a LinkedIn post editor.
+
+    Current Post:
+
+    {post}
+
+    User Instruction:
+
+    {instruction}
+
+    Modify the LinkedIn post according to the instruction.
+
+    Rules:
+    - Keep it human-like
+    - Maintain readability
+    - Keep LinkedIn writing style
+    - Return only the updated post
     '''
 
     response = llm.invoke(prompt)
