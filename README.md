@@ -24,6 +24,7 @@ instead of relying only on static prompting.
 ### Generated LinkedIn Post
 
 <img width="100%" alt="Generated Post" src="screenshots\img2.png">
+<img width="100%" alt="Generated Post" src="screenshots\img3.png">
 
 ---
 
@@ -35,8 +36,9 @@ instead of relying only on static prompting.
 * Dynamic retrieval using SQLite
 * Metadata extraction and filtering
 * Interactive Streamlit UI
-* Copy-ready generated posts
-
+* Conversational post refinement
+* Additional context-based generation
+* Emoji style control
 ---
 
 ## Tech Stack
